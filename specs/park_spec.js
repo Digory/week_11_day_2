@@ -105,7 +105,7 @@ describe('Park', function() {
     assert.strictEqual(actual, expected);
    })
 
-   it('should be able to get an object containing the species and frequency of occurence', function(){
+   it('should be able to get an object containing the food types and frequency of occurence', function(){
     park.addDinosaur(dinosaurRex);
     park.addDinosaur(dinosaurSnapface);
     park.addDinosaur(dinosaurBitey);
