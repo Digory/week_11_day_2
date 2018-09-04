@@ -45,4 +45,22 @@ Park.prototype.removeAllOfSpecies = function(species){
     }
 }
 
+
+Park.prototype.getDailyVisitors = function(){
+    let total = 0;
+    for(let dinosaur of this.collectionOfDinosaurs){
+        total += dinosaur.guestsAttractedPerDay;
+    }
+    return total;
+}
+
+Park.prototype.getYearlyVisitors = function(){
+    return 364 * this.getDailyVisitors();
+}
+
+Park.prototype.getYearlyRevenue = function(){
+    return this.ticketPrice * this.getYearlyVisitors();
+}
+
+
 module.exports = Park;

@@ -78,31 +78,31 @@ describe('Park', function() {
     assert.deepStrictEqual(actual, expected);
   });
 
-  // it('should be able to check the total number of daily visitors', function(){
-  //   park.addDinosaur(dinosaurRex);
-  //   park.addDinosaur(dinosaurSnapface);
-  //   park.addDinosaur(dinosaurBitey);
-  //   const actual = park.getDailyVisitors();
-  //   const expected = 450;
-  //   assert.strictEqual(actual, expected);
-  // })
+  it('should be able to check the total number of daily visitors', function(){
+    park.addDinosaur(dinosaurRex);
+    park.addDinosaur(dinosaurSnapface);
+    park.addDinosaur(dinosaurBitey);
+    const actual = park.getDailyVisitors();
+    const expected = 450;
+    assert.strictEqual(actual, expected);
+  })
 
-  // it('should be able to check the total number of yearly visitors', function(){
-  //   park.addDinosaur(dinosaurRex);
-  //   park.addDinosaur(dinosaurSnapface);
-  //   park.addDinosaur(dinosaurBitey);
-  //   const actual = park.getYearlyVisitors();
-  //   const expected = 163800;
-  //   assert.strictEqual(actual, expected);
-  // })
+  it('should be able to check the total number of yearly visitors', function(){
+    park.addDinosaur(dinosaurRex);
+    park.addDinosaur(dinosaurSnapface);
+    park.addDinosaur(dinosaurBitey);
+    const actual = park.getYearlyVisitors();
+    const expected = 163800;
+    assert.strictEqual(actual, expected);
+  })
 
-  // it('should be able to get the yearly revenue from ticket sales', function(){
-  //   park.addDinosaur(dinosaurRex);
-  //   park.addDinosaur(dinosaurSnapface);
-  //   park.addDinosaur(dinosaurBitey);
-  //   const actual = park.getYearlyRevenue();
-  //   const expected = 2702700;
-  //   assert.strictEqual(actual, expected);
-  //  })
+  it('should be able to get the yearly revenue from ticket sales', function(){
+    park.addDinosaur(dinosaurRex);
+    park.addDinosaur(dinosaurSnapface);
+    park.addDinosaur(dinosaurBitey);
+    const actual = park.getYearlyRevenue();
+    const expected = 2702700;
+    assert.strictEqual(actual, expected);
+   })
 
 });
