@@ -11,9 +11,9 @@ describe('Park', function() {
 
   beforeEach(function () {
     park = new Park("Digory's fun park", 16.50);
-    dinosaurRex = new Dinosaur("T-rex", "meat", 200);
+    dinosaurRex = new Dinosaur("T_rex", "meat", 200);
     dinosaurSnapface = new Dinosaur("Brontosaurus", "leaves", 150);
-    dinosaurBitey = new Dinosaur("T-rex", "meat", 100);
+    dinosaurBitey = new Dinosaur("T_rex", "meat", 100);
   })
 
   it('should have a name', function(){
@@ -63,7 +63,7 @@ describe('Park', function() {
     park.addDinosaur(dinosaurRex);
     park.addDinosaur(dinosaurSnapface);
     park.addDinosaur(dinosaurBitey);
-    const actual = park.findAllOfSpecies("T-rex");
+    const actual = park.findAllOfSpecies("T_rex");
     const expected = [dinosaurRex, dinosaurBitey];
     assert.deepStrictEqual(actual, expected);
   });
@@ -72,7 +72,7 @@ describe('Park', function() {
     park.addDinosaur(dinosaurRex);
     park.addDinosaur(dinosaurSnapface);
     park.addDinosaur(dinosaurBitey);
-    park.removeAllOfSpecies("T-rex");
+    park.removeAllOfSpecies("T_rex");
     const actual = park.collectionOfDinosaurs;
     const expected = [dinosaurSnapface];
     assert.deepStrictEqual(actual, expected);
@@ -103,6 +103,18 @@ describe('Park', function() {
     const actual = park.getYearlyRevenue();
     const expected = 2702700;
     assert.strictEqual(actual, expected);
+   })
+
+   it('should be able to get an object containing the species and frequency of occurence', function(){
+    park.addDinosaur(dinosaurRex);
+    park.addDinosaur(dinosaurSnapface);
+    park.addDinosaur(dinosaurBitey);
+    const actual = park.getDinosaurTypes();
+    const expected = {
+      T_rex: 2,
+      Brontosaurus: 1
+    }
+    assert.deepStrictEqual(actual, expected);
    })
 
 });
