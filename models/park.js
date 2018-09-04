@@ -65,15 +65,15 @@ Park.prototype.getYearlyRevenue = function(){
 // Provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type
 // Example: { 'carnivore': 5, 'herbivore': 2, 'omnivore': 1 }
 
-Park.prototype.getDinosaurTypes = function(){
-    let dinosaurTypes = {};
+Park.prototype.getDinosaurFoodTypes = function(){
+    let dinosaurFoodTypes = {};
     for(let dinosaur of this.collectionOfDinosaurs){
-        dinosaurTypes[dinosaur.species] = 0;
+        dinosaurFoodTypes[dinosaur.diet] = 0;
     }
     for(let dinosaur of this.collectionOfDinosaurs){
-        dinosaurTypes[dinosaur.species]++;
+        dinosaurFoodTypes[dinosaur.diet]++;
     }
-    return dinosaurTypes;
+    return dinosaurFoodTypes;
 }
 
 module.exports = Park;

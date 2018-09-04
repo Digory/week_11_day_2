@@ -109,10 +109,10 @@ describe('Park', function() {
     park.addDinosaur(dinosaurRex);
     park.addDinosaur(dinosaurSnapface);
     park.addDinosaur(dinosaurBitey);
-    const actual = park.getDinosaurTypes();
+    const actual = park.getDinosaurFoodTypes();
     const expected = {
-      T_rex: 2,
-      Brontosaurus: 1
+      meat: 2,
+      leaves: 1
     }
     assert.deepStrictEqual(actual, expected);
    })
